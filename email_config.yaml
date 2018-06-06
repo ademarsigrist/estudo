@@ -1,0 +1,7 @@
+fromaddr: 'ademar.sigrist@gmail.com'
+username: 'ademar.sigrist'
+password: 'nanaliv1'
+eserver:  'smtp.gmail.com'
+port:     587
+protSSL:  False
+protTLS:  True
