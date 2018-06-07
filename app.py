@@ -21,10 +21,10 @@ app.config['MAIL_DEFAULT_SENDER'] 	= emailbox['fromaddr']
 
 mail = Mail(app) 
 
-# Endereço de e-mail destino e mensagem que será enviada
+# Endereco de e-mail destino e mensagem que sera enviada
 toaddrs = 'ademar.sigrist@gmail.com'
 subject = 'E-mail Flask'
-txt_msg = 'É Mensagem de teste de envio de email via Flask'
+txt_msg = 'Mensagem de teste de envio de email via Flask'
 
 
 # Página index.html
@@ -32,7 +32,7 @@ txt_msg = 'É Mensagem de teste de envio de email via Flask'
 def index():
 	msg = Message(subject, recipients=[toaddrs])
 	#msg.body = txt_msg 
-	msg.html = "<b>Esse é um teste de HTML</b>"
+	msg.html = "<b>Esse e um teste de HTML</b>"
 	#msg.html = render_template('body_curso_ml.html')
 	#with app.open_resource("teste.txt") as fp:
 	#	msg.attach("teste.txt", "text/plain", fp.read())
@@ -40,7 +40,7 @@ def index():
 		msg.attach("Ficha_Resumo_ML_1.pdf", "application/pdf", fp.read())
 	try:
 		mail.send(msg)
-		return "<h1>E-mail é enviado com sucesso!  :) <h1>"
+		return "<h1>E-mail e enviado com sucesso!  :) <h1>"
 	except:
 		return 'Ocorreu um ERRO no envio do E-mail!' 
 
